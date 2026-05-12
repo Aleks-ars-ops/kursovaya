@@ -245,7 +245,7 @@
             margin-bottom: 20px;
         }
 
-        /* СТАТИСТИКА — широкая, на всю ширину, без пустот */
+        /* СТАТИСТИКА — широкая */
         .stats-wrapper {
             background: rgba(0, 0, 0, 0.3);
             border-radius: 30px;
@@ -290,7 +290,51 @@
             margin-top: 8px;
         }
 
-        /* Гарантии */
+        /* Карточка с 5 причинами — вместо пустоты */
+        .reasons-card {
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 30px;
+            padding: 40px 30px;
+            text-align: center;
+            border: 2px solid rgba(255, 215, 0, 0.4);
+            backdrop-filter: blur(5px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .reasons-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: #ffd700;
+        }
+
+        .reasons-card p {
+            font-size: 1rem;
+            color: #cbd5e0;
+            margin-bottom: 20px;
+        }
+
+        .reasons-list {
+            text-align: left;
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .reasons-list li {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .reasons-list i {
+            color: #ffd700;
+            font-size: 1.2rem;
+        }
+
         .guarantees {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -679,7 +723,7 @@
                 <h2>Автор курсовых и дипломных работ</h2>
                 <p>Профессиональный автор с 10-летним опытом. Пишу курсовые, дипломные, статьи по экономике, юриспруденции, педагогике, психологии и техническим дисциплинам.</p>
                 
-                <!-- СТАТИСТИКА — широкая, без пустот -->
+                <!-- СТАТИСТИКА -->
                 <div class="stats-wrapper">
                     <div class="stats">
                         <div class="stat-card"><div class="stat-number">10 лет</div><div class="stat-label">опыта</div></div>
@@ -701,8 +745,21 @@
                     <a href="#contact" class="btn btn-outline"><i class="fas fa-headset"></i> Бесплатная консультация</a>
                 </div>
             </div>
+
+            <!-- ВСТАВЛЯЕМ КАРТИНКУ С 5 ПРИЧИНАМИ вместо пустоты -->
             <div>
-                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format" alt="Юлия" style="width:100%; border-radius:30px; box-shadow:0 20px 40px rgba(0,0,0,0.3);">
+                <div class="reasons-card">
+                    <i class="fas fa-lightbulb" style="font-size: 3rem; color: #ffd700; margin-bottom: 20px;"></i>
+                    <h3>5 весомых причин</h3>
+                    <p>приступать к выполнению курсовой/дипломной работы заранее (а не за 1 день до защиты)</p>
+                    <ul class="reasons-list">
+                        <li><i class="fas fa-check-circle"></i> Высокое качество и глубокая проработка</li>
+                        <li><i class="fas fa-check-circle"></i> Возможность внести правки без спешки</li>
+                        <li><i class="fas fa-check-circle"></i> Снижение стресса и паники перед сдачей</li>
+                        <li><i class="fas fa-check-circle"></i> Лучшая уникальность и научная ценность</li>
+                        <li><i class="fas fa-check-circle"></i> Спокойная защита и уверенность в себе</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
