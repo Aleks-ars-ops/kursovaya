@@ -98,11 +98,6 @@
             transform: translateY(-3px);
         }
 
-        .btn-urgent {
-            background: linear-gradient(135deg, #ff6b6b, #ff8e8e);
-            color: white;
-        }
-
         /* Шапка */
         .header {
             position: fixed;
@@ -168,7 +163,6 @@
             color: #ffd700;
         }
 
-        /* Правая часть шапки — телефон и кнопка */
         .header-right {
             display: flex;
             align-items: center;
@@ -251,21 +245,28 @@
             margin-bottom: 20px;
         }
 
-        /* Статистика крупная и красивая */
+        /* СТАТИСТИКА — широкая, на всю ширину, без пустот */
+        .stats-wrapper {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 30px;
+            padding: 30px 20px;
+            margin: 40px 0;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
         .stats {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 25px;
-            margin: 40px 0;
+            gap: 30px;
+            text-align: center;
         }
 
         .stat-card {
             background: rgba(255, 255, 255, 0.08);
             padding: 25px 15px;
             border-radius: 20px;
-            text-align: center;
-            border: 1px solid rgba(255, 215, 0, 0.25);
             transition: 0.3s;
+            border: 1px solid rgba(255, 215, 0, 0.2);
         }
 
         .stat-card:hover {
@@ -275,19 +276,21 @@
         }
 
         .stat-number {
-            font-size: 2.5rem;
+            font-size: 2.8rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ffd700, #ffed4e);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            line-height: 1;
         }
 
         .stat-label {
             font-size: 0.9rem;
             color: #cbd5e0;
-            margin-top: 5px;
+            margin-top: 8px;
         }
 
+        /* Гарантии */
         .guarantees {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -606,7 +609,11 @@
             .hero-grid {
                 grid-template-columns: 1fr;
             }
-            .stats, .guarantees {
+            .stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .guarantees {
                 grid-template-columns: repeat(2, 1fr);
             }
             .header-right {
@@ -618,7 +625,10 @@
         }
 
         @media (max-width: 576px) {
-            .stats, .guarantees {
+            .stats {
+                grid-template-columns: 1fr;
+            }
+            .guarantees {
                 grid-template-columns: 1fr;
             }
             .hero-actions {
@@ -669,11 +679,14 @@
                 <h2>Автор курсовых и дипломных работ</h2>
                 <p>Профессиональный автор с 10-летним опытом. Пишу курсовые, дипломные, статьи по экономике, юриспруденции, педагогике, психологии и техническим дисциплинам.</p>
                 
-                <div class="stats">
-                    <div class="stat-card"><div class="stat-number">10 лет</div><div class="stat-label">опыта</div></div>
-                    <div class="stat-card"><div class="stat-number">520+</div><div class="stat-label">выполненных работ</div></div>
-                    <div class="stat-card"><div class="stat-number">98%</div><div class="stat-label">уникальность</div></div>
-                    <div class="stat-card"><div class="stat-number">185+</div><div class="stat-label">постоянных клиентов</div></div>
+                <!-- СТАТИСТИКА — широкая, без пустот -->
+                <div class="stats-wrapper">
+                    <div class="stats">
+                        <div class="stat-card"><div class="stat-number">10 лет</div><div class="stat-label">опыта</div></div>
+                        <div class="stat-card"><div class="stat-number">520+</div><div class="stat-label">выполненных работ</div></div>
+                        <div class="stat-card"><div class="stat-number">98%</div><div class="stat-label">уникальность</div></div>
+                        <div class="stat-card"><div class="stat-number">185+</div><div class="stat-label">постоянных клиентов</div></div>
+                    </div>
                 </div>
 
                 <div class="guarantees">
